@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Admin Light Mode (Warm linear/vercel aesthetic) */
+    --bg-base: #FBF9F6;
+    --bg-surface: #FFFFFF;
+    --bg-elevated: #F4F1EA;
+    --border-subtle: #E8E4DC;
+    --border-strong: #D5CEBF;
+    --text-primary: #1C1917;
+    --text-secondary: #57534E;
+    --text-muted: #8A847C;
+    
+    /* Brand Accent: Palm sugar / Amber caramel #E0913A */
+    --accent: #E0913A;
+    --accent-hover: #CC7E2A;
+    --accent-subtle: rgba(224, 145, 58, 0.12);
+
+    /* Functional semantic colors */
+    --success: #3FB68B;
+    --warning: #E8B931;
+    --danger: #E5484D;
+  }
+
+  .dark {
+    /* POS / KDS Dark Mode (low glare for long shifts) */
+    --bg-base: #0E1013;
+    --bg-surface: #171A1F;
+    --bg-elevated: #20242B;
+    --border-subtle: #262A31;
+    --border-strong: #383E49;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+    --text-muted: #6B7280;
+
+    --accent: #E0913A;
+    --accent-hover: #F0A34D;
+    --accent-subtle: rgba(224, 145, 58, 0.18);
+  }
+
+  body {
+    font-family: 'Kantumruy Pro', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .font-moul {
+    font-family: 'Moul', cursive;
+  }
+
+  .font-kantumruy {
+    font-family: 'Kantumruy Pro', sans-serif;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Soft Multi-layer Shadows */
+.shadow-soft {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Thermal 80mm Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  #thermal-receipt-container,
+  #thermal-receipt-container * {
+    visibility: visible;
+  }
+
+  #thermal-receipt-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 3mm 4mm;
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Kantumruy Pro', monospace;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+}

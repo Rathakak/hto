@@ -1,0 +1,6 @@
+{
+  "name": "ប្រព័ន្ធគ្រប់គ្រងភោជនីយដ្ឋាន - Restaurant Management System",
+  "description": "ប្រព័ន្ធគ្រប់គ្រងភោជនីយដ្ឋានពេញលេញសម្រាប់កម្ពុជា រួមមាន POS, Kitchen Display System (KDS), Menu, គ្រប់គ្រងតុ, ស្តុក, បុគ្គលិក, របាយការណ៍ និងការទូទាត់ប្រាក់ពីររូបិយប័ណ្ណ (USD & KHR) ព្រមទាំង ABA KHQR",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
